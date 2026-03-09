@@ -27,10 +27,9 @@ The original emg2pose codebase is released under CC BY-NC-SA 4.0. Data utility f
 │   ├── transforms.py   # EMG transforms (extraction, augmentation, downsampling)
 │   ├── alignment.py    # Temporal alignment utilities
 │   └── utils.py        # Split loading, IK failure masking, downsampling
-├── scaler/
-│   └── user_scalers.pkl  # Per-user StandardScaler objects for z-score normalization
-├── emg_pose_lstm_colab.ipynb   # Colab notebook for training
-├── lr_search_colab.ipynb       # Colab notebook for learning rate search
+├── notebooks/
+│   ├── emg_pose_lstm_colab.ipynb   # Colab notebook for training
+│   └── lr_search_colab.ipynb       # Colab notebook for learning rate search
 └── README.md
 ```
 
