@@ -10,7 +10,7 @@ This repository builds an LSTM-based pipeline for mapping 16-channel EMG wristba
 
 > **emg2pose: A Large and Diverse Benchmark for Surface Electromyographic Hand Pose Estimation**
 > Sasha Salter, Richard Warren, Collin Schlager, Adrian Spurr, Shangchen Han, Rohin Bhasin, Yujun Cai, Peter Walkington, Anuoluwapo Bolarinwa, Robert Wang, Nathan Danielson, Josh Merel, Eftychios Pnevmatikakis, Jesse Marshall
-> [arXiv:2412.02725]([https://arxiv.org/abs/2412.02725])
+> [arXiv:2412.02725](https://arxiv.org/abs/2412.02725)
 > [GitHub: facebookresearch/emg2pose](https://github.com/facebookresearch/emg2pose)
 
 The original emg2pose codebase is released under CC BY-NC-SA 4.0. Data utility functions, session loading, transforms, and alignment code in the `data/` module are extracted and modified from that repository.
