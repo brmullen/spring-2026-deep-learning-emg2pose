@@ -9,8 +9,8 @@ This project was developed as part of the [Erdos Institute](https://www.erdosins
 This repository builds an LSTM-based pipeline for mapping 16-channel EMG wristband signals to 20 degree-of-freedom hand joint angles at 2kHz. The data loading, session handling, and preprocessing code is adapted from Meta's **emg2pose** repository:
 
 > **emg2pose: A Large and Diverse Benchmark for Surface Electromyographic Hand Pose Estimation**
-> Sasha Salter, Richard Warren, Collin Schlager, Adrian Spurr, Juergen Gall, Otmar Hilliges, Shangchen Han
-> [arXiv:2311.18012](https://arxiv.org/abs/2311.18012)
+> Sasha Salter, Richard Warren, Collin Schlager, Adrian Spurr, Shangchen Han, Rohin Bhasin, Yujun Cai, Peter Walkington, Anuoluwapo Bolarinwa, Robert Wang, Nathan Danielson, Josh Merel, Eftychios Pnevmatikakis, Jesse Marshall
+> [arXiv:2412.02725]([https://arxiv.org/abs/2412.02725])
 > [GitHub: facebookresearch/emg2pose](https://github.com/facebookresearch/emg2pose)
 
 The original emg2pose codebase is released under CC BY-NC-SA 4.0. Data utility functions, session loading, transforms, and alignment code in the `data/` module are extracted and modified from that repository.
