@@ -50,7 +50,7 @@ We deployed our best model as a live demo on Hugging Face Spaces at huggingface.
 ### References
 Bao, T., Zaidi, S. A. R., Xie, S. Q., Yang, P., & Zhang, Z. Q. (2021). A CNN-LSTM hybrid model for wrist kinematics estimation using surface electromyography. IEEE Transactions on Instrumentation and Measurement, 70, 1–10. https://doi.org/10.1109/TIM.2020.3031070.
 Han, S., Wu, P., Zhang, Y., Liu, B., Zhang, L., Wang, Z., Si, W., Zhang, P., Cai, Y., Hodan, T., Cabezas, R., Tran, L., Akbay, M., Yu, T., Keskin, C., & Wang, R. (2022). UmeTrack: Unified multi-view end-to-end hand tracking for VR. SIGGRAPH Asia 2022 Conference Papers. https://doi.org/10.1145/3550469.3555378. 
-Salter, S., Warren, R., Schlager, C., Spurr, A., Han, S., Bhasin, R., Cai, Y., Walkington, P., Bolarinwa, A., Wang, R., Danielson, N., Merel, J., Pnevmatikakis, E., & Marshall, J. (2024). emg2pose: A large and diverse benchmark for surface electromyographic hand pose estimation. arXiv. https://doi.org/10
+Salter, S., Warren, R., Schlager, C., Spurr, A., Han, S., Bhasin, R., Cai, Y., Walkington, P., Bolarinwa, A., Wang, R., Danielson, N., Merel, J., Pnevmatikakis, E., & Marshall, J. (2024). emg2pose: A large and diverse benchmark for surface electromyographic hand pose estimation. arXiv. https://doi.org/10.48550/arXiv.2412.02725
 
 ## Repository Structure
 
