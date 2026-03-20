@@ -1,12 +1,12 @@
 # Spatiotemporal modeling of pose estimation in wearables
 
 Members: Brian Mullen, Dayoung Lee, Kristin Dona, & Sero Toriano Parel
+
 Instructor: Lindsay Warrenburg & Marcos Ortiz
-Program: Erdős Institute Deep Learning Boot Camp, Spring 2026
+
+Program: [Erdős Institute](https://www.erdosinstitute.org/) Deep Learning Boot Camp, Spring 2026
 
 Predicting hand joint angles from surface EMG signals using LSTM networks.
-
-This project was developed as part of the [Erdos Institute](https://www.erdosinstitute.org/) Deep Learning program.
 
 ## Overview
 
@@ -80,19 +80,6 @@ Salter, S., Warren, R., Schlager, C., Spurr, A., Han, S., Bhasin, R., Cai, Y., W
 └── README.md
 ```
 
-## Models
-
-- **EMGPoseLSTM** -- Processes full sequences in one shot. Input: `(B, 16, T)`, Output: `(B, 20, T)`. Used for training.
-- **SequentialEMGPoseLSTM** -- Steps through one timestep at a time with persistent hidden state. Used for streaming inference.
-
-## Data
-
-The pipeline uses the emg2pose dataset:
-
-- **Full dataset** (431 GiB, 25k sessions): `curl "https://fb-ctrl-oss.s3.amazonaws.com/emg2pose/emg2pose_dataset.tar" -o emg2pose_dataset.tar`
-
-Each session is an HDF5 file containing synchronized 16-channel EMG and 20-DOF joint angle ground truth at 2kHz.
-
 ## Usage
 
 ### Training
@@ -139,12 +126,3 @@ Training saves to `--output_dir`:
 - **IK failure masking**: Timesteps where all joint angles are zero (inverse kinematics failures) are excluded from loss computation
 - **Z-score normalization**: Per-user EMG scaling using Welford online normalization (see `welford.py`)
 - **Augmentation**: Random channel rotation during training
-
-## Loss
-
-Masked MAE (L1) loss on joint angles, following the AngleMAE metric from emg2pose. The IK failure mask ensures the model is only trained on valid ground truth.
-
-## Acknowledgments
-
-- [emg2pose](https://github.com/facebookresearch/emg2pose) by Meta Platforms, Inc. for the dataset, data loading infrastructure, and model architecture inspiration (CC BY-NC-SA 4.0)
-- [Erdos Institute](https://www.erdosinstitute.org/) Deep Learning program
