@@ -50,13 +50,13 @@ We deployed our best model as a live demo on Hugging Face Spaces at huggingface.
 ### References
 Bao, T., Zaidi, S. A. R., Xie, S. Q., Yang, P., & Zhang, Z. Q. (2021). A CNN-LSTM hybrid model for wrist kinematics estimation using surface electromyography. IEEE Transactions on Instrumentation and Measurement, 70, 1–10. https://doi.org/10.1109/TIM.2020.3031070.
 Han, S., Wu, P., Zhang, Y., Liu, B., Zhang, L., Wang, Z., Si, W., Zhang, P., Cai, Y., Hodan, T., Cabezas, R., Tran, L., Akbay, M., Yu, T., Keskin, C., & Wang, R. (2022). UmeTrack: Unified multi-view end-to-end hand tracking for VR. SIGGRAPH Asia 2022 Conference Papers. https://doi.org/10.1145/3550469.3555378. 
-Salter, S., Warren, R., Schlager, C., Spurr, A., Han, S., Bhasin, R., Cai, Y., Walkington, P., Bolarinwa, A., Wang, R., Danielson, N., Merel, J., Pnevmatikakis, E., & Marshall, J. (2024). emg2pose: A large and diverse benchmark for surface electromyographic hand pose estimation. arXiv. https://doi.org/10.48550/arXiv.2412.02725
+Salter, S., Warren, R., Schlager, C., Spurr, A., Han, S., Bhasin, R., Cai, Y., Walkington, P., Bolarinwa, A., Wang, R., Danielson, N., Merel, J., Pnevmatikakis, E., & Marshall, J. (2024). emg2pose: A large and diverse benchmark for surface electromyographic hand pose estimation. arXiv. https://doi.org/10
 
 ## Repository Structure
 
 ```
 .
-├── model.py            # LSTM models (EMGPoseLSTM, SequentialEMGPoseLSTM)
+├── model.py            # models (EMGPoseLSTM, SequentialEMGPoseLSTM, ...)
 ├── train.py            # Training loop with checkpointing and early stopping
 ├── load_data.py        # Data loading pipeline and get_dataloaders()
 ├── data/
@@ -64,10 +64,18 @@ Salter, S., Warren, R., Schlager, C., Spurr, A., Han, S., Bhasin, R., Cai, Y., W
 │   ├── transforms.py   # EMG transforms (extraction, augmentation, downsampling)
 │   ├── alignment.py    # Temporal alignment utilities
 │   └── utils.py        # Split loading, IK failure masking, downsampling
-├── scaler/
-│   └── user_scalers.pkl  # Per-user StandardScaler objects for z-score normalization
-├── emg_pose_lstm_colab.ipynb   # Colab notebook for training
-├── lr_search_colab.ipynb       # Colab notebook for learning rate search
+├── notebooks/
+│   ├── emg_pose_lstm_colab.ipynb          # Colab notebook for LSTM training
+│   ├── lr_search_colab.ipynb              # Learning rate search
+│   ├── CNN_LSTM.ipynb                     # CNN+LSTM model experiments
+│   ├── CNN_LSTM_diagnostics.ipynb         # CNN+LSTM diagnostics and analysis
+│   ├── TDS_LSTM.ipynb                     # TDS+LSTM model experiments
+│   ├── checkpoint_CNN-LSTM_TDS-LSTM.ipynb # Checkpoint evaluation for CNN+LSTM and TDS+LSTM
+│   ├── Model Visualizations.ipynb         # Model output visualizations
+│   ├── Model_generalization.ipynb         # Cross-user generalization analysis
+│   ├── MAE-joint_anlge_references.ipynb   # MAE and joint angle reference analysis
+│   ├── Metadata Analysis.ipynb            # Dataset metadata exploration
+│   └── Welford stat.ipynb                 # Welford normalization statistics
 └── README.md
 ```
 
