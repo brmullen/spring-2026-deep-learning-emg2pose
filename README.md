@@ -1,4 +1,4 @@
-# Spatiotemporal modeling of pose estimation in wearables
+# Spatiotemporal Modeling of Pose Estimation in Wearables
 
 Members: Brian Mullen, Dayoung Lee, Kristin Dona, & Sero Toriano Parel
 
