@@ -59,6 +59,7 @@ Salter, S., Warren, R., Schlager, C., Spurr, A., Han, S., Bhasin, R., Cai, Y., W
 ├── model.py            # models (EMGPoseLSTM, SequentialEMGPoseLSTM, ...)
 ├── train.py            # Training loop with checkpointing and early stopping
 ├── load_data.py        # Data loading pipeline and get_dataloaders()
+├── welford.py          # Welford online normalization utilities
 ├── data/
 │   ├── session.py      # HDF5 session reader, windowed dataset, z-score scaling
 │   ├── transforms.py   # EMG transforms (extraction, augmentation, downsampling)
@@ -136,7 +137,7 @@ Training saves to `--output_dir`:
 
 - **Windowing**: 1-second windows (2000 samples) for training, 5-second windows (10000 samples) for validation/test
 - **IK failure masking**: Timesteps where all joint angles are zero (inverse kinematics failures) are excluded from loss computation
-- **Z-score normalization**: Per-user EMG scaling using pre-fitted StandardScaler objects from `scaler/user_scalers.pkl`
+- **Z-score normalization**: Per-user EMG scaling using Welford online normalization (see `welford.py`)
 - **Augmentation**: Random channel rotation during training
 
 ## Loss
